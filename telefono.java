@@ -40,6 +40,7 @@ public class telefono implements dispositivo{
     }
 
     @Override
+    //tuve que poner void en vez de String porque saber porque no funcionaba
     public void validar() {
         if(estado == true){
             System.out.println(modelo + " esta encendido.");

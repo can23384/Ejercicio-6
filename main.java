@@ -31,7 +31,7 @@ public class main{
                 String[] campos = linea.split(";");
 
                 String modelo = campos[1];
-
+//comprobar si el tipo de dispositvo es telefono o computadora
                 if (campos[0].equals("telefono")) {
                         telefono telefono = new telefono(modelo);
                         if(campos[2].equals("encendido")){
@@ -60,7 +60,7 @@ public class main{
         }
 
 
-/////a///////////////////
+/////a///////////////////menu
         boolean hola = true;
         while(hola){
             System.out.println("==============================");
@@ -76,6 +76,7 @@ public class main{
 
             switch(opcion){
                 case 1:
+                    //opcion para agregar un dispositivo nuevo
                     System.out.println("Que tipo de dispositivo quiere agregar telefono/computadora? ");
                     String tipo = teclado.nextLine();
                     System.out.println("Escriba el modelo del dispositivo: ");
@@ -105,6 +106,7 @@ public class main{
                     break;
 
                 case 2:
+                    //yo creo que esta opcion ni sirve 
                     System.out.println("Que modelo quiere modificar?");
                     String nombre = teclado.nextLine();
                     System.out.println("El dispositivo se encuentra encendido o apagado?");
@@ -121,7 +123,7 @@ public class main{
                                 cell.apagar();
                             }     
                         }
-
+                        //ojala pudiera declararle el amor que siento pero solo se declarar variables :c
                         else if (dispositivo instanceof telefono) {
                             computadora cumpu = (computadora) dispositivo;
                             if((cumpu.getModelo()).equals(nombre)){
